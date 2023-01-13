@@ -18,3 +18,17 @@
 }
 /*comment*/
 
+header{
+  display: flex; /* to align logo and navbar in the same line*/
+  align-items: center; /* to align logo and navbar vertically*/
+}
+.logo img {
+  width: 100px; /* to set width of logo*/
+  height: auto; /* to set height of logo*/
+}
+
+
+
+
+
+
