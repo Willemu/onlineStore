@@ -1,0 +1,20 @@
+/*styling the about page*/
+#about {
+  background-color: #f0f0f0;
+  padding: 2em;
+}
+
+#about h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+#about p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #666;
+  text-align: justify;
+}
+/*comment*/
+
