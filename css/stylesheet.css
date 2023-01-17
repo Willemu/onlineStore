@@ -1,3 +1,13 @@
+/*styling the navbar*/
+.navbar {
+  position: sticky;
+  top: 0;
+  color: #333;
+  color: #fff;
+}
+
+
+
 /*styling the about page*/
 #about {
   background-color: #f0f0f0;
