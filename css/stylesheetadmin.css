@@ -1,3 +1,4 @@
+/*-- adding the css to style the products input form--*/
 .adminform {
   display: inline-block;
   flex-wrap: wrap;
@@ -17,6 +18,7 @@ button {
   width: 100%;
 }
 
+/*--adding the styling elements for the display of the captured products--*/
 table {
   width: 100%;
   border-collapse: collapse;
