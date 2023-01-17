@@ -1,3 +1,5 @@
+// Populating the DB with the products captured by the users
+
 const form = document.getElementById("adminform");
 form.addEventListener("submit", event => {
   event.preventDefault();
@@ -20,6 +22,44 @@ form.addEventListener("submit", event => {
   event.target.image.value = "";
   event.target.price.value = "";
 });
+
+// Adding the display of the products captured in the directory
+
+// Get reference to the element where the product list will be displayed
+const productList = document.getElementById("product-list");
+
+// Open a cursor to iterate through the products in the "products" object store
+const transaction = db.transaction("products");
+const objectStore = transaction.objectStore("products");
+const cursor = objectStore.openCursor();
+
+cursor.onsuccess = event => {
+  const cursor = event.target.result;
+  if (cursor) {
+    // Create a new list item element
+    const productItem = document.createElement("li");
+
+    // Add the product name to the element
+    productItem.innerHTML = `<h2>${cursor.value.name}</h2>`;
+
+    // Create an image element and set its src to the product image
+    const productImage = document.createElement("img");
+    productImage.src = cursor.value.image;
+
+    // Add the image to the list item
+    productItem.appendChild(productImage);
+
+    // Add the price to the element
+    productItem.innerHTML += `<p>${cursor.value.price}</p>`;
+
+    // Append the list item to the product list
+    productList.appendChild(productItem);
+
+    // Move to the next product
+    cursor.continue();
+  }
+};
+
 
 // Shop now js
 $(document).ready(function(){
