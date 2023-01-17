@@ -34,4 +34,4 @@ for (let i = 0; i < products.length; i++) {
   productItem.appendChild(productImage);
 
   // Add the price to the element
-  productItem.innerHTML += `<p>${product.price}</p>`
+  productItem.innerHTML += `<p>${product.price}</p>`}

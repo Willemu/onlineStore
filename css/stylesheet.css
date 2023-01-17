@@ -27,32 +27,3 @@ header{
   height: auto; /* to set height of logo*/
 }
 
-body {
-  font-family: Arial, sans-serif;
-}
-
-header h1 {
-  text-align: center;
-}
-
-#product-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-#product-list li {
-  width: 30%;
-  margin-bottom: 1em;
-}
-
-#product-list img {
-  width: 100%;
-}
-
-
-
-
-
-
-
